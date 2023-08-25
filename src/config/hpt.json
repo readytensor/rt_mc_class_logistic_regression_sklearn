@@ -1,0 +1,27 @@
+{
+  "num_trials": 20,
+  "hyperparameters": [
+    {
+      "name": "penalty",
+      "short_desc": "The norm of the penalty - one of l1, l2, elasticnet, or none",
+      "type": "categorical",
+      "categories": ["l1", "l2", "elasticnet", "none"]
+    },
+    {
+      "name": "C",
+      "short_desc": "Inverse of regularization strength; must be a positive float. Like in support vector machines, smaller values specify stronger regularization.",
+      "type": "real",
+      "search_type": "uniform",
+      "range_low": 1e-6,
+      "range_high": 1.0
+    },
+    {
+      "name": "l1_ratio",
+      "short_desc": "The Elastic-Net mixing parameter, with 0 <= l1_ratio <= 1. Only used if penalty='elasticnet'",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 0.0,
+      "range_high": 1.0
+    }
+  ]
+}
